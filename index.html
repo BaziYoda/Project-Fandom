@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gunpla Showroom</title>
+    <!-- <meta name="viewport" content="width-device-width, initial-scale-1, minimum-scale-1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/pr1.stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/PR1.js"></script>
+
+</head>
+    <body>
+        <main>
+            <div class="logo"> Gunpla Hobby</div>
+            <div Class="social">
+                <div class="bar"></div>
+                <a href="https://www.facebook.com/groups/gunplanetwork/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/explore/tags/gunpla/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/gunplagba?lang=en target=_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide first">
+                        <div class="red"></div>
+                        <div class="blue"></div>
+                        <div class="black"></div>
+                        <div class="content">
+                            <div class="title">
+                                <div class="small">Let's Build</div>
+                                <div class="big"><span>G</span><span>U</span><span>N</span><span>D</span><span>A</span><span>M</span></div>
+                            </div>
+                            <div class="image">
+                                <img src="img/GWZ3.png" alt="">
+                            </div>
+                            <div class="specs">
+                                <span><b>435 </b> Pcs</span>
+                                <span><b>1/144 </b> Scale</span>
+                                <span><b>5x3x5 </b> ins"</span> 
+                                <button class="custom-open-button-1">Discover More<i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide second">
+                        <div class="maroon"></div>
+                        <div class="green"></div>
+                        <div class="black"></div>
+                        <div class="content">
+                            <div class="title">
+                                <div class="small">Let's Build</div>
+                                <div class="big"><span>G</span><span>U</span><span>N</span><span>D</span><span>A</span><span>M</span></div>
+                            </div>
+                            <div class="image">
+                                <img src="img/Epyon.png" alt="">
+                            </div>
+                            <div class="specs">
+                                <span><b>320</b> Pcs</span>
+                                <span><b>1/100</b> Scale</span>
+                                <span><b>15x12x3.14 </b>in"</span>
+                                <button class="custom-open-button-2" alt="purple-c">Discover More<i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide third">
+                        <div class="grey"></div>
+                        <div class="gold"></div>
+                        <div class="black"></div>
+                        <div class="content">
+                            <div class="title">
+                                <div class="small">Let's Build</div>
+                                <div class="big"><span>G</span><span>U</span><span>N</span><span>D</span><span>A</span><span>M</span></div>
+                            </div>
+                            <div class="image">
+                                <img src="img/tallgeese.png" alt="">
+                            </div>
+                            <div class="specs">
+                                <span><b>302</b> Pcs</span>
+                                <span><b>1/144</b> Scale</span>
+                                <span><b>8x13x6 </b>in"</span>
+                                <button class="custom-open-button-3" alt="gold-c"> Discover More <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+        <!-- Initialize Swiper and GSAP animations -->
+        <script>
+            var swiper = new Swiper(".swiper", {
+                direction: "vertical",
+                slidesPerView: 1,
+                spaceBetween: 30,
+                mousewheel: true,
+                effect: "coverflow",
+                speed: 2000,
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"> <span>' +
+                            String(index + 1).padStart(2, '0') +  '</span></span>';
+                    },
+                },
+            });
+    
+            gsap.from(".first .red", {
+                y: -1000,
+                duration: 2
+            });
+            gsap.from(".first .black", {
+                y: 1000,
+                duration: 2
+            });
+            gsap.from(".first .blue", {
+                y: 1000,
+                duration: 2
+            });
+            gsap.from(".first img", {
+                x:1000,
+                duration: 2
+            });
+            gsap.from(".first .small", {
+                y:100,
+                opacity: 0,
+                delay: 2.1
+            });
+            gsap.from(".first .big span", {
+                y:100,
+                opacity: 0,
+                stagger: 0.2,
+                delay:2.1
+            }); 
+           
+        </script>
+        <dialog class="modal" id="modal">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel">World of Gunpla</h1>
+                <button type="button" class="close-button" data-bs-dismiss="modal" aria-label="Close"> <i class="fa fa-window-close" aria-hidden="true"></i></button>
+            </div>
+            <div class="modal-body">
+                <p class="short">The <strong>Gundam Wing Zero</strong> model kit is an exquisite masterpiece that pays homage to the iconic mobile suit from the "Gundam Wing" series. This highly detailed 1/100 scale model captures the grace and power of Wing Zero, allowing you to recreate epic battles and intricate poses. With its numerous accessories and impressive articulation, this kit offers an exciting building experience for both beginners and seasoned Gunpla enthusiasts, making it a must-have addition to any collection.</p>
+                <div class="row">
+                    <img class="wing" src="img/wingzero1.png">
+                    <img class="wing" src="img/wingzero2.png">
+                    <img class="wing" src="img/wingzero3.png">
+                    <img class="wing" src="img/wingzero4.png">
+                </div>
+            </div>
+                <p class="short"><strong>Gunpla</strong> or <strong>Gundam Plastic Models:</strong> is a captivating journey of creativity and craftsmanship. Dive into the world, where you'll assemble, customize, and breathe life into iconic mobile suits from the legendary Gundam universe. Discover the joy of personalizing your models, and expressing your artistic flair. Engage with a vibrant community, learn valuable skills and experiences. Join the global phenomenon of Gunpla building and unlock a world of endless creative possibilities.</p>
+            <div class="row" alt="Gunpla-Row">
+                <img class="gunpla" src="img/Gunpla2.png">
+                <img class="gunpla" src="img/Gunpla3.png">
+                <img class="gunpla" src="img/Gunpla4.png">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="startBuildButton" data-bs-dismiss="modal">Build Tutorial
+                    <i class="fa-brands fa-youtube fa-bounce"></i>
+                </button>
+                <button type="button" class="btn btn-primary" id="followBuildButton">Start your Journey
+                    <i class="fa fa-shopping-cart" style="color: #fff;" aria-hidden="true"></i>
+                </button>
+              </div>
+        </dialog>
+    </body>
+
+</html>
